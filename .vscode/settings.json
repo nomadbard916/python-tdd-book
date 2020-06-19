@@ -1,0 +1,12 @@
+{
+  "python.pythonPath": "e:\\Coding_projects\\python-tdd-book\\venv\\Scripts\\python.exe",
+  "python.autoComplete.extraPaths": [
+    "e:\\Coding_projects\\python-tdd-book\\venv\\Lib\\site-packages\\",
+    "e:\\Coding_projects\\python-tdd-book\\"
+  ],
+  "files.exclude": {
+    "venv": true,
+    ".vscode": true
+  },
+  "workspace.isHidden": true,
+}
