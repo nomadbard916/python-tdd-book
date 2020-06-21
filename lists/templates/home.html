@@ -6,8 +6,18 @@
 
   <body>
     <h1>Your To-Do lists</h1>
-    <input placeholder="Enter a to-do item" id="id_new_item">
-    <table id="id_list_table"></table>
+    <form action="" method="post">
+      <input name="item_text" placeholder="Enter a to-do item" id="id_new_item">
+      {% csrf_token %}
+    </form>
+
+    <table id="id_list_table">
+      {% for item in items  %}
+      <tr>
+        <td>{{ forloop.couter }}: {{ item.text }}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 
 </html>
