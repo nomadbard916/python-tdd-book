@@ -11,11 +11,15 @@
     "geckodriver.exe": true,
     "geckodriver.log": true,
     "chromedriver.exe": true,
-    ".gitignore": true
+    ".gitignore": true,
+    "lists/__pycache__": true,
+    "superlists/__pycache__": true,
+    "lists/migrations/__pycache__": true
   },
   "workspace.isHidden": true,
   "python.testing.unittestArgs": ["-v", "-s", "./lists", "-p", "test*.py"],
   "python.testing.pytestEnabled": false,
   "python.testing.nosetestsEnabled": false,
-  "python.testing.unittestEnabled": true
+  "python.testing.unittestEnabled": true,
+  "projectManager.git.baseFolders": ["e:\\Coding_projects\\python-tdd-book\\"]
 }
