@@ -135,5 +135,9 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# webdrivers
 chromedriver.exe
 geckodriver.exe
+
+# static folder
+static/
