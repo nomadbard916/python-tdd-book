@@ -1,6 +1,5 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.keys import Keys
 import time
@@ -11,11 +10,10 @@ MAX_WAIT = 10
 
 class NewVisitorTest(StaticLiveServerTestCase):
     def setUp(self):
-        self.browser = webdriver.Chrome()
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-pu")
+        firefox_options = webdriver.FirefoxOptions()
+        firefox_options.set_headless()
+        self.browser = webdriver.Firefox(firefox_options=firefox_options)
+
         staging_server = os.environ.get("STAGING_SERVER")
         if staging_server:
             self.live_server_url = "http://" + staging_server
@@ -89,13 +87,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
         ## We use a new browser session to make sure that no information
         ## of Edith's is coming through from cookies etc
         self.browser.quit()
-        self.browser = webdriver.Chrome()
-
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-pu")
-
+        firefox_options = webdriver.FirefoxOptions()
+        firefox_options.set_headless()
+        self.browser = webdriver.Firefox(firefox_options=firefox_options)
         # Francis visits the home page.  There is no sign of Edith's
         # list
         self.browser.get(self.live_server_url)
