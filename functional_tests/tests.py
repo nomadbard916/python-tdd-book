@@ -14,6 +14,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         self.browser = webdriver.Chrome()
         chrome_options = Options()
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-pu")
         staging_server = os.environ.get("STAGING_SERVER")
         if staging_server:
@@ -92,6 +93,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
         chrome_options = Options()
         chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-pu")
 
         # Francis visits the home page.  There is no sign of Edith's
