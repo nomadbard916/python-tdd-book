@@ -1,15 +1,9 @@
-from django.contrib.staticfiles.testing import StaticLiveServerTestCase
+from .base import FunctionalTest
 from selenium import webdriver
-from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.keys import Keys
-import time
-import os
-from unittest import skip
-
-MAX_WAIT = 10
 
 
-class NewVisitorTest(StaticLiveServerTestCase):
+class NewVisitorTest(FunctionalTest):
     def test_can_start_a_list_for_one_user(self):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
