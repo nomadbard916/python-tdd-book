@@ -5,11 +5,12 @@ from selenium.webdriver.common.keys import Keys
 import time
 import os
 from unittest import skip
+from .base import FunctionalTest
 
 MAX_WAIT = 10
 
 
-class NewVisitorTest(StaticLiveServerTestCase):
+class LayoutAndStylingTest(FunctionalTest):
     def setUp(self):
         firefox_options = webdriver.FirefoxOptions()
         firefox_options.set_headless()
