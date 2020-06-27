@@ -5,25 +5,31 @@
     "e:\\Coding_projects\\python-tdd-book\\**"
   ],
   "files.exclude": {
-    "venv": true,
-    ".vscode": true,
-    "manage.py": true,
-    "geckodriver.exe": true,
-    "geckodriver.log": true,
-    "chromedriver.exe": true,
-    ".gitignore": true,
-    "lists/__pycache__": true,
-    "superlists/__pycache__": true,
-    "lists/migrations/__pycache__": true,
-    "functional_tests/__pycache__": true
+    "venv": false,
+    ".vscode": false,
+    "manage.py": false,
+    "geckodriver.exe": false,
+    "geckodriver.log": false,
+    "chromedriver.exe": false,
+    ".gitignore": false,
+    "lists/__pycache__": false,
+    "superlists/__pycache__": false,
+    "lists/migrations/__pycache__": false,
+    "functional_tests/__pycache__": false
   },
-  "workspace.isHidden": true,
-  "python.testing.unittestArgs": ["-v", "-s", "./lists", "-p", "test*.py"],
-  "python.testing.pytestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
-  "python.testing.unittestEnabled": false,
+  "workspace.isHidden": false,
   "projectManager.git.baseFolders": [
     "e:\\Coding_projects\\python-tdd-book\\"
   ],
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./lists",
+    "-p",
+    "test_*.py"
+  ],
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": false,
   "python.testing.promptToConfigure": false
 }
