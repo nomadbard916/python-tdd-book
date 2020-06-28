@@ -33,14 +33,6 @@
   // "python.testing.cwd": "${workspaceFolder}\\",
 
   "python.testing.pytestEnabled": true,
-  "python.testing.nosetestsEnabled": false,
-  "sshfs.configs": [
-    {
-      "host": "192.168.56.1",
-      "name": "experiment",
-      "password": "jjcy916",
-      "username": "mercurycgt68"
-    }
-  ]
+  "python.testing.nosetestsEnabled": false
   // "python.testing.unittestEnabled": true
 }
