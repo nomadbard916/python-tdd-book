@@ -140,4 +140,4 @@ chromedriver.exe
 geckodriver.exe
 
 # static folder
-static/
+/static
