@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "lists",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,7 @@ else:
     DEBUG = True
     SECRET_KEY = "insecure-key-for-dev"
     ALLOWED_HOSTS = []
+
+# for authentication
+AUTH_USER_MODEL = "accounts.User"
+
