@@ -35,3 +35,22 @@ class LoginTest(FunctionalTest):
         url_search = re.search(r"http://.+/.+$", email.body)
         if not url_search:
             self.fail(f"Could not find url in email body:")
+
+        url = url_search.group(0)
+        self.assertIn(self.live_server_url, url)
+
+        # she clicks it
+        self.browser.get(url)
+
+        # she is logged in!
+        self.wait_for(lambda: self.browser.find_element_by_link_text("Log out"))
+        navbar = self.browser.find_element_by_css_selector(".navbar")
+        self.assertIn(TEST_EMAIL, navbar.text)
+
+        # Now she logs out
+        self.browser.find_element_by_link_text("Log out").click()
+
+        # She is logged out
+        self.wait_for(lambda: self.browser.find_element_by_name("email"))
+        navbar = self.browser.find_element_by_css_selector(".navbar")
+        self.assertNotIn(TEST_EMAIL, navbar.text)
